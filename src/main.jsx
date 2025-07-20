@@ -5,7 +5,7 @@ import "./index.css";
 import App from "./App.jsx";
 import About from "./Components/page/about/about.jsx";
 import Carrer from "./Components/page/carrer/carrer.jsx";
-import Login from "./Components/auth/login.jsx";
+import Login from "./Components/auth/Login.jsx";
 import NotFound from "./Components/error/NotFound.jsx";
 
 import MainLayout from "./Components/Layout/MainLayout.jsx";
@@ -26,7 +26,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/carrer" element={<Carrer />} />
           <Route path="*" element={<NotFound />} />
         </Route>
-        <Route path="/login" element={<Login />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

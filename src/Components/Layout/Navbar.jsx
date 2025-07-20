@@ -57,7 +57,7 @@ export default function Navbar() {
             <div className="flex items-center gap-4">
               <div className="sm:flex sm:gap-4">
                 <NavLink
-                  to="/login"
+                  to="/Login"
                   className="py-2.5 px-2 bg-teal-300 text-teal-600 rounded-md mr-4 mb-5 hover:bg-teal-900 "
                 >
                   Login

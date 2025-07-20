@@ -1,18 +1,21 @@
 // import React { use } from "react";
 import { useLocation } from "react-router";
 import React, { useState, useEffect } from "react";
+import { getData } from "../../../api/api";
+import CardProduct from "../../../Components/Card/card-products";
 
-export default function product() {
+export default function Product() {
   const { state } = useLocation();
   const [product, setProduct] = useState([]);
   let getProucts = async () => {
     let result = await getData(`/products/categories/${state}`);
+
     setProduct(result);
   };
 
   useEffect(() => {
     getProucts();
-  }, []);
+  }, [state]);
 
   console.log(product);
   return (

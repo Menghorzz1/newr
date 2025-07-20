@@ -38,7 +38,7 @@ function App() {
   // console.log(Products);
 
   const handleOnClick = () => {
-    navigate("/product", { state: categories.slug });
+    navigate("/products", { state: categories.slug });
   };
   return (
     <>
@@ -52,7 +52,7 @@ function App() {
       {/*Header*/}
       {/* <Navbar /> */}
       {/*main*/}
-      <main className="max-w-screen-lg mx-auto ">
+      <main className="max-w-screen-lg mx-auto mt-10 ">
         {categories.slice(0, 8).map((categories, index) => (
           <button
             onClick={() => handleOnClick(categories.slug)}

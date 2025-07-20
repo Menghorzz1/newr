@@ -6,14 +6,13 @@ import { getData } from "../../../api/api";
 export default function ProductDetial() {
   const { id } = useParams();
   let [product, setProduct] = useState({});
-  let [categories, setCategories] = useState([]);
+  // Removed unused categories state
 
   const getPrdouctById = async () => {
-    let result = await getData(`/product/${id}`);
+    let result = await getData(`/products/${id}`);
     setProduct(result);
 
-    //get category
-    let categories = await getData(`/products/categories`);
+    // Removed unused category fetching
   };
   useEffect(() => {
     getPrdouctById();
